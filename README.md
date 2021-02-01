@@ -41,8 +41,8 @@
 
 ---
 
-공통: 백준(Baekjoon Online Judge) : https://www.acmicpc.net/ (주 3문제)
-개인: 
+- 공통: 백준(Baekjoon Online Judge) : https://www.acmicpc.net/ (주 3문제)
+- 개인: 
 
 <br>
 
