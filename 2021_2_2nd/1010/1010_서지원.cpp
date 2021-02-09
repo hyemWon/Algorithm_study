@@ -52,3 +52,30 @@ int main() {
 	}
 	return 0;
 }
+
+//조합성질 DP
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int dp(int n, int m, vector<vector<int>> &v) {
+	if (n == m) { return 1; }
+	else if (n == 1) { return m; }
+	else if (v[m][n] == 0) { return v[m][n] = dp(n - 1, m - 1, v) + dp(n, m - 1, v); }
+	else return v[m][n];
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		int n, m;
+		cin >> n >> m;
+		vector<vector<int>>v(m+1, vector<int>(n+1, 0));
+		cout << dp(n, m, v) << endl;
+		v.clear();
+	}
+}
